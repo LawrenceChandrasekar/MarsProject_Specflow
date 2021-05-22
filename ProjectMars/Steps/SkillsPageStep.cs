@@ -71,7 +71,7 @@ namespace ProjectMars.Steps
             Assert.IsFalse(IsValid);
         }
 
-        // update
+        // update change
 
         [When(@"you click edit button")]
         public void WhenYouClickEditButton()
