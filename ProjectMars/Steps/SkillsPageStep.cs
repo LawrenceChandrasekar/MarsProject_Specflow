@@ -68,7 +68,7 @@ namespace ProjectMars.Steps
         public void ThenValidateTheSkillsIsCreated()
         {
             bool IsValid = skillsPage.validateSkill_created();
-            Assert.IsFalse(IsValid);
+            Assert.IsTrue(IsValid);
         }
 
         // update change
@@ -100,7 +100,12 @@ namespace ProjectMars.Steps
             Console.WriteLine("I validate the result");
         }
 
+        //delete
 
-
+        [Then(@"I click delete btn to delete the record")]
+        public void ThenIClickDeleteBtnToDeleteTheRecord()
+        {
+            skillsPage.clickOnDeleteBtn();
+        }
     }
 }

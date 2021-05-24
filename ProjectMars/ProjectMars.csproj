@@ -34,13 +34,13 @@
     <SpecFlowFeatureFiles Update="FeatureFiles\LanguagePage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LanguagePage.feature.cs</LastGenOutput>
+      <Visible>False</Visible>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="FeatureFiles\SkillsFeature.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SkillsFeature.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="FeatureFiles\EducationFeature.feature">
-      <Visible>False</Visible>
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>EducationFeature.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>

@@ -24,7 +24,7 @@ namespace ProjectMars.Pages
         private IWebElement lastEntryResult_Lang => driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
         //private IWebElement Language_link => driver.FindElement(By.XPath("//a[normalize-space()='Languages']"));
         // #################UPDATE PAGE FACTORY ############
-        private IWebElement clickEditBtnLang => driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[1]"));
+        private IWebElement clickEditBtnLang => driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[1]/i"));
         private IWebElement editLang => driver.FindElement(By.XPath("//input[@placeholder='Add Language']"));
         private IWebElement dropDown_edit_Lang => driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td/div/div[2]/select/option[5]"));
         private IWebElement updateBtnLang => driver.FindElement(By.XPath("//input[@value='Update']"));
@@ -44,8 +44,9 @@ namespace ProjectMars.Pages
         }
         public void enterlanguage()
         {
-            enterLanguage.SendKeys("Java");
             Wait.ElementExists(driver, "XPath", "enterLanguage", 10);
+            enterLanguage.SendKeys("Java");
+            
         }
         public void dropDown_lang_list()
         {
@@ -135,7 +136,7 @@ namespace ProjectMars.Pages
         }
 
 
-
+        /*
         public void createLanguage(IWebDriver driver)
         {
 
@@ -148,5 +149,6 @@ namespace ProjectMars.Pages
         {
 
         }
+        */
     }
 }

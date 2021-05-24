@@ -102,7 +102,7 @@ namespace ProjectMars.Pages
 
         public bool validateUpdate_Skill()
         {
-            if (lastEntryResult_Lang.Text == "Badminton da")
+            if (lastEntryResult_Lang.Text == "flag")
             {
                 Console.WriteLine("Skill is Updated Successfully!!, Test Pass!!");
                 return true;

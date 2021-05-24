@@ -30,54 +30,93 @@ namespace ProjectMars.Steps
             driver.Close();
         }
 
-        [Given("I am logged in")]
-        public void GivenIAmLoggedIn()
+        [Given("user have logged in")]
+        public void GivenUserHaveLoggedIn()
         {
             loginPage.login(null,null);
-            Console.WriteLine("I am logged in"); 
+            Console.WriteLine("user have logged in"); 
         }
-        [Given("I am at the language page")]
-        public void GivenIAmAtTheLanguagePage()
+        [Given(@"user click on the language tab")]
+        public void GivenUserClickOnTheLanguageTab()
         {
             profilePage.navigateToLanguage(driver);
-            Console.WriteLine("I am at the language page");
+            Console.WriteLine("user click on the language tab");
         }
-        [When("I click the create add new button")]
-        public void WhenIClickTheCreateAddNewButton()
+        //[Given("I am at the language page")]
+        //public void GivenIAmAtTheLanguagePage()
+        //{
+        //    profilePage.navigateToLanguage(driver);
+        //    Console.WriteLine("I am at the language page");
+        //}
+        [Given(@"user click add new button for the language")]
+        public void GivenUserClickAddNewButtonForTheLanguage()
         {
             languagePage.clickAddNewBtn();
-            Console.WriteLine("I click the create add new button");
+            Console.WriteLine("user click add new button for the language");
         }
-        [When("Enter the details for new language")]
-        public void WhenEnterTheDetailsForNewLanguage()
+        //[When("I click the create add new button")]
+        //public void WhenIClickTheCreateAddNewButton()
+        //{
+        //    languagePage.clickAddNewBtn();
+        //    Console.WriteLine("I click the create add new button");
+        //}
+        [Then(@"user enter the details for new language")]
+        public void ThenUserEnterTheDetailsForNewLanguage()
         {
             languagePage.enterlanguage();
             languagePage.dropDown_lang_list();
-            Console.WriteLine("Enter the details for new language"); 
+            Console.WriteLine("user enter the details for new language");
         }
-        [When("Click add to save language")]
-        public void WhenClickAddToSaveLanguage()
+        //[When("Enter the details for new language")]
+        //public void WhenEnterTheDetailsForNewLanguage()
+        //{
+        //    languagePage.enterlanguage();
+        //    languagePage.dropDown_lang_list();
+        //    Console.WriteLine("Enter the details for new language"); 
+        //}
+        [When(@"user click add button to save new language")]
+        public void WhenUserClickAddButtonToSaveNewLanguage()
         {
             languagePage.Save_Language();
-            Console.WriteLine("Click add to save language");
+            Console.WriteLine("user click add button to save new language");
         }
-        [Then("Validate the language is created")]
-        public void ThenValidateTheLanguageIsCreated()
+        //[When("Click add to save language")]
+        //public void WhenClickAddToSaveLanguage()
+        //{
+        //    languagePage.Save_Language();
+        //    Console.WriteLine("Click add to save language");
+        //}
+        [Then(@"user Validate the language is created")]
+        public void ThenUserValidateTheLanguageIsCreated()
         {
             languagePage.validateLanguage_created();
             //bool IsValid = languagePage.validateLanguage_created();
             Console.WriteLine("Validate the language is created");
             // Assert.IsTrue(IsValid);
         }
+        //[Then("Validate the language is created")]
+        //public void ThenValidateTheLanguageIsCreated()
+        //{
+        //    languagePage.validateLanguage_created();
+        //    //bool IsValid = languagePage.validateLanguage_created();
+        //    Console.WriteLine("Validate the language is created");
+        //    // Assert.IsTrue(IsValid);
+        //}
 
         // Update
 
-        [When("I click the edit button")]
-        public void WhenIClickTheEditButton()
+        [When(@"user click edit btn and update file")]
+        public void WhenUserClickEditBtnAndUpdateFile()
         {
             languagePage.clickEditLanguage();
             Console.WriteLine("I click the edit button");
         }
+        //[When("I click the edit button")]
+        //public void WhenIClickTheEditButton()
+        //{
+        //    languagePage.clickEditLanguage();
+        //    Console.WriteLine("I click the edit button");
+        //}
         [When("I edit the details")]
         public void WhenIEditTheDetails()
         {
@@ -85,19 +124,33 @@ namespace ProjectMars.Steps
             languagePage.selectDropDown();
             Console.WriteLine("I edit the details");
         }
+        [When(@"user save the record")]
+        public void WhenUserSaveTheRecord()
+        {
+            languagePage.update_Btn_Language();
+            Console.WriteLine("I click update to save language");
+        }
         [When("I click update to save language")]
         public void WhenIClickUpdateToSaveLanguage()
         {
             languagePage.update_Btn_Language();
             Console.WriteLine("I click update to save language");
         }
-        [Then("Validate that lang I edited was saved")]
-        public void ThenValidateThatLangIEditedWasSaved()
+        [Then(@"update record should be verified")]
+        public void ThenUpdateRecordShouldBeVerified()
         {
             bool IsValid = languagePage.validateUpdate_Lang();
             Console.WriteLine("Validate that lang I edited was saved");
             Assert.IsFalse(IsValid);
         }
+
+        //[Then("Validate that lang I edited was saved")]
+        //public void ThenValidateThatLangIEditedWasSaved()
+        //{
+        //    bool IsValid = languagePage.validateUpdate_Lang();
+        //    Console.WriteLine("Validate that lang I edited was saved");
+        //    Assert.IsFalse(IsValid);
+        //}
 
         //Delete
         [Given("I click delete button")]

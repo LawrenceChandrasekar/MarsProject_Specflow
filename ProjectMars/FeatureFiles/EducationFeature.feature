@@ -2,7 +2,7 @@
 
 	
  
-Scenario: I am able to create education details
+Scenario Outline: 1 I am able to create education details
 	Given I have logged in
 	And I click on the education tab
 	And I click add new button for the education
@@ -11,7 +11,7 @@ Scenario: I am able to create education details
     Then Validate the education is created
 
  
-Scenario: I am edit education details
+Scenario Outline: 2  I am edit education details
 	Given I have logged in
     And I click on the education tab	
     And I click edit icon to edit education
@@ -20,7 +20,7 @@ Scenario: I am edit education details
     Then Validate the edited education is created
 
  
-Scenario: I am able to delete education
+Scenario Outline: 3  I am able to delete education
 	Given I have logged in
     And I click on the education tab	
     And I click delete icon to delete education

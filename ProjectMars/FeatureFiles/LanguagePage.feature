@@ -1,27 +1,26 @@
-﻿Feature: Functionality around Language Page
+﻿Feature: Language Page
 	
  
-Scenario: I am able to create language
-	Given I am logged in
-	And I am at the language page 
-	When I click the create add new button
-	And Enter the details for new language
-	And Click add to save language
-	Then Validate the language is created
+ Scenario Outline: 1 create Languages on the profile page
+	Given user have logged in
+	And user click on the language tab
+	And user click add new button for the language
+	Then user enter the details for new language
+	When user click add button to save new language
+    Then user Validate the language is created
 
 
 
-Scenario: I am able to edit the language
-	Given I am logged in
-    And I am at the language page
-    When I click the edit button
-    And I edit the details
-    And I click update to save language
-    Then Validate that lang I edited was saved
+Scenario Outline: 2 update Language on the profile page 
+	Given user have logged in
+	And user click on the language tab
+	When user click edit btn and update file
+	And user save the record
+	Then update record should be verified
 
 
-Scenario: I am able to delete the language
-	Given I am logged in
-    And I am at the language page
+Scenario: user able to delete the language
+	Given user have logged in
+    And user click on the language tab
     And I click delete button
     Then I have to validate the language and it deleted
