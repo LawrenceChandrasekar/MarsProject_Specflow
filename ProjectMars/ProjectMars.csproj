@@ -30,7 +30,6 @@
     <SpecFlowFeatureFiles Update="FeatureFiles\LoginPage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LoginPage.feature.cs</LastGenOutput>
-      <Visible>False</Visible>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="FeatureFiles\LanguagePage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

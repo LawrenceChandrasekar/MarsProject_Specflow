@@ -12,7 +12,7 @@ namespace ProjectMars.Pages
         {
             this.driver = driver;
         }
-        // ###########  PAGE FACTORY DESIGN PATTERN ####################//
+        // ###########  PAGE FACTORY DESIGN PATTERN ####################//ed
 
         private IWebElement EducationTabLink => driver.FindElement(By.XPath("//a[normalize-space()='Education']"));
         private IWebElement clickAddNewBtn_Edu => driver.FindElement(By.CssSelector("div[class='ui bottom attached tab segment tooltip-target active'] div[class='ui teal button ']"));
