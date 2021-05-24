@@ -24,7 +24,7 @@
     <Folder Include="Utilities\" />
     <Folder Include="FeatureFiles\" />
     <Folder Include="Steps\" />
-    <Folder Include="Hooks\" />
+    <Folder Include="hook\" />
   </ItemGroup>
   <ItemGroup>
     <SpecFlowFeatureFiles Update="FeatureFiles\LoginPage.feature">
